@@ -97,6 +97,12 @@ fun updateOfficer() {
             val unsolvedCrimes = readNextInt("Enter unsolved crimes: ")
             val salary = readNextDouble("Enter salary: ")
             val peopleSaved = readNextInt("Enter people saved: ")
+
+            if(officerAPI.updateOfficer(indexToUpdate, Officer(name, dateOfBirth, type, crimeSolved, unsolvedCrimes, salary, peopleSaved))) {
+                println("Update Successful")
+            } else {
+                println("Update Failed")
+            }
         }
     }
 }
