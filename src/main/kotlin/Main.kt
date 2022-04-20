@@ -11,6 +11,7 @@ import java.lang.System.exit
 
 
 private val officerAPI = OfficerAPI(JSONSerializer(File("officers.json")))
+private val officerAPI2 = OfficerAPI(XMLSerializer(File("officers.xml")))
 
 fun main(args: Array<String>) {
     runMenu()
@@ -161,6 +162,7 @@ fun exitApp() {
 fun save() {
     try {
         officerAPI.store()
+        officerAPI2.store()
     } catch (e: Exception) {
         System.err.println("Error writing to file: $e")
     }
@@ -169,6 +171,7 @@ fun save() {
 fun load() {
     try {
         officerAPI.load()
+        officerAPI2.store()
     } catch (e: Exception) {
         System.err.println("Error reading from file: $e")
     }
