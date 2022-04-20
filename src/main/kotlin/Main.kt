@@ -52,10 +52,10 @@ fun runMenu() {
             7 -> searchOfficer()
             8 -> unsolvedCrimes()
             9 -> officersWithHigherSolvedCrimes()
-            10 -> //saveOfficers()
-            11 -> //loadOfficers()
+            10 ->  println()
+            11 -> println()
             0 -> exitApp()
-            else -> println("Invalid option enteredL $option")
+            else -> println("Invalid option entered $option")
         }
     } while(true)
 }
