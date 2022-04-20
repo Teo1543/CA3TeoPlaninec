@@ -27,7 +27,8 @@ fun mainMenu(): Int {
          > |   5) Delete a Police Officers                 |
          > |   6) List Crime Number              |
          > |   7) Search Police Officers 
-         >     8) List solved crime             |
+         >     8) List solved crime        
+         >     9) Officers With Higher solved crimes     |
          > --------------------------------------
          > |   9) Save Police Officers                   |
          > |   10) Load Police Officers                   |
@@ -49,8 +50,9 @@ fun runMenu() {
             6 -> listCrimeNumber()
             7 -> searchOfficer()
             8 -> unsolvedCrimes()
-            9 -> saveOfficers()
-            10 -> loadOfficers()
+            9 -> officersWithHigherSolvedCrimes()
+            10 -> saveOfficers()
+            11 -> loadOfficers()
             0 -> exitApp()
             else -> println("Invalid option enteredL $option")
         }
@@ -141,6 +143,10 @@ fun listCrimeNumber() {
 fun unsolvedCrimes() {
     println("Crime level 5 or more")
     println(officerAPI.listUnsolvedCrime())
+}
+
+fun officersWithHigherSolvedCrimes() {
+    println(officerAPI.officersWithHigherSolvedCrimes());
 }
 
 
