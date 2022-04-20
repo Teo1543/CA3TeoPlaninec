@@ -21,24 +21,24 @@ fun main(args: Array<String>) {
 fun mainMenu(): Int {
     return ScannerInput.readNextInt(
         """ 
-         > --------------------------------------
-         > |       Police Officers APP             |
-         > --------------------------------------
-         > | NOTE MENU                          |
+         > -------------------------------------------------
+         > |       Police Officers APP                     |
+         > -------------------------------------------------
+         > | NOTE MENU                                     |
          > |   1) Add a Police Officers                    |
-         > |   2) List Police Officers                    |
-         > |   3) Officer Type
+         > |   2) List Police Officers                     |
+         > |   3) Officer Type                             |
          > |   4) Update a Police Officers                 |
          > |   5) Delete a Police Officers                 |
-         > |   6) List Crime Number              |
-         > |   7) Search Police Officers 
-         >     8) List solved crime        
-         >     9) Officers With Higher solved crimes     |
-         > --------------------------------------
-         > |   10) Save Police Officers                   |
-         > |   11) Load Police Officers                   |
-         > |   0) Exit                          |
-         > --------------------------------------
+         > |   6) List Crime Number                        |
+         > |   7) Search Police Officers                   |
+         > |   8) List solved crime                        |
+         > |   9) Officers With Higher solved crimes       |
+         > -------------------------------------------------
+         > |   10) Save Police Officers                    |
+         > |   11) Load Police Officers                    |
+         > |   0) Exit                                     |
+         > -------------------------------------------------
          > ==>> """.trimMargin(">")
     )
 }
@@ -155,7 +155,7 @@ fun officersWithHigherSolvedCrimes() {
 }
 
 fun exitApp() {
-    println("Exiting...bye")
+    println("Exiting... bye")
     exit(0)
 }
 
