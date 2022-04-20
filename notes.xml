@@ -1,0 +1,31 @@
+<object-stream>
+  <list>
+    <models.Officer>
+      <name>Maciej</name>
+      <dateOfBirth>20/05/2005</dateOfBirth>
+      <officerType>Junior</officerType>
+      <crimesSolved>5</crimesSolved>
+      <unsolvedCrimes>10</unsolvedCrimes>
+      <salary>10000.0</salary>
+      <peopleSaved>5</peopleSaved>
+    </models.Officer>
+    <models.Officer>
+      <name>Zach</name>
+      <dateOfBirth>01/07/2000</dateOfBirth>
+      <officerType>Senior</officerType>
+      <crimesSolved>18</crimesSolved>
+      <unsolvedCrimes>13</unsolvedCrimes>
+      <salary>20000.0</salary>
+      <peopleSaved>8</peopleSaved>
+    </models.Officer>
+    <models.Officer>
+      <name>Dom</name>
+      <dateOfBirth>20/12/2010</dateOfBirth>
+      <officerType>Junior</officerType>
+      <crimesSolved>7</crimesSolved>
+      <unsolvedCrimes>5</unsolvedCrimes>
+      <salary>30000.0</salary>
+      <peopleSaved>2</peopleSaved>
+    </models.Officer>
+  </list>
+</object-stream>
