@@ -85,3 +85,20 @@ fun officerType() {
     println(officers)
 }
 
+fun updateOfficer() {
+    listOfficer()
+    if(officerAPI.numberOfficers() > 0) {
+        val indexToUpdate = readNextInt("Enter the index of the officer to updateL ")
+        if(officerAPI.isValidIndex(indexToUpdate)) {
+            val name = readNextLine("Enter name: ")
+            val dateOfBirth = readNextLine("Enter date of birth: ")
+            val type = readNextLine("Enter officer type: ")
+            val crimeSolved = readNextInt("Enter crimes solved: ")
+            val unsolvedCrimes = readNextInt("Enter unsolved crimes: ")
+            val salary = readNextDouble("Enter salary: ")
+            val peopleSaved = readNextInt("Enter people saved: ")
+        }
+    }
+}
+
+
