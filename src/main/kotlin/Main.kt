@@ -27,16 +27,15 @@ fun mainMenu(): Int {
          > | Officer MENU                                  |
          > |   1) Add a Police Officers                    |
          > |   2) List Police Officers                     |
-         > |   3) Officer Type                             |
-         > |   4) Update a Police Officers                 |
-         > |   5) Delete a Police Officers                 |
-         > |   6) List Crime Number                        |
-         > |   7) Search Police Officers                   |
-         > |   8) List solved crime                        |
-         > |   9) Officers With Higher solved crimes       |
+         > |   3) Update a Police Officers                 |
+         > |   4) Delete a Police Officers                 |
+         > |   5) List Crime Number                        |
+         > |   6) Search Police Officers                   |
+         > |   7) List solved crime                        |
+         > |   8) Officers With Higher solved crimes       |
          > -------------------------------------------------
-         > |   10) Save Police Officers                    |
-         > |   11) Load Police Officers                    |
+         > |   9) Save Police Officers                    |
+         > |   10) Load Police Officers                    |
          > |   0) Exit                                     |
          > -------------------------------------------------
          > ==>> """.trimMargin(">")
@@ -49,15 +48,14 @@ fun runMenu() {
         when(option) {
             1 -> addOfficer()
             2 -> listOfficer()
-            3 -> officerType()
-            4 -> updateOfficer()
-            5 -> deleteOfficer()
-            6 -> listCrimeNumber()
-            7 -> searchOfficer()
-            8 -> unsolvedCrimes()
-            9 -> officersWithHigherSolvedCrimes()
-            10 ->  save()
-            11 -> load()
+            3 -> updateOfficer()
+            4 -> deleteOfficer()
+            5 -> listCrimeNumber()
+            6 -> searchOfficer()
+            7 -> unsolvedCrimes()
+            8 -> officersWithHigherSolvedCrimes()
+            9 ->  save()
+            10 -> load()
             0 -> exitApp()
             else -> println("Invalid option entered $option")
         }
@@ -83,13 +81,6 @@ fun addOfficer() {
 
 fun listOfficer() {
     var officers = officerAPI.listAllOfficers()
-
-    println(officers)
-}
-
-fun officerType() {
-    var type = readNextLine("Enter officer type: ")
-    var officers = officerAPI.officerTypeFinder(type)
 
     println(officers)
 }
