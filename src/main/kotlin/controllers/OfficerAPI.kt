@@ -86,13 +86,14 @@ class OfficerAPI {
         }
     }
 
-    fun listUnsolvedCrime(number : Int) {
+    fun listUnsolvedCrime(): String {
         var officersString = "";
         for(Officer in officers) {
             if(Officer.unsolvedCrimes >= 5) {
                 officersString = officersString + Officer  + "\n"
             }
         }
+        return officersString
     }
 
     fun officersWithHigherSolvedCrimes() {
