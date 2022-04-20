@@ -25,7 +25,7 @@ fun mainMenu(): Int {
          > |   3) Officer Type
          > |   4) Update a Police Officers                 |
          > |   5) Delete a Police Officers                 |
-         > |   6) (custom method)               |
+         > |   6) List Crime Number              |
          > |   7) Search Police Officers                  |
          > --------------------------------------
          > |   8) Save Police Officers                   |
@@ -45,7 +45,7 @@ fun runMenu() {
             3 -> officerType()
             4 -> updateOfficer()
             5 -> deleteOfficer()
-            6 -> println("custom method")
+            6 -> listCrimeNumber()
             7 -> searchOfficer()
             8 -> saveOfficers()
             9 -> loadOfficers()
@@ -127,6 +127,12 @@ fun searchOfficer() {
 
    var officers = officerAPI.officerTypeFinder(type)
 
+    println(officers)
+}
+
+fun listCrimeNumber() {
+    var number = readNextInt("Enter crime number: ")
+   var officers = officerAPI.listCrimeByNumber(number)
     println(officers)
 }
 
