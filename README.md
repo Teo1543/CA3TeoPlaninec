@@ -2,7 +2,7 @@
 
 ## Tutorial:
 
-The Police Officers app consists of the following:
+### The Police Officers app consists of the following:
 
 --------------------------------------------------
 
@@ -15,7 +15,7 @@ The Police Officers app consists of the following:
 7. Lists solved crimes
 8. Lists officers with solved crimes over 5
 --------------------------------------------
-10. Saves Police OFficers
+10. Saves Police Officers
 11. Loeads Police Officers
 12. Exits the application
 
