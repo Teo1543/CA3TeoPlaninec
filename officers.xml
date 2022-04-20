@@ -1,0 +1,13 @@
+<object-stream>
+  <list>
+    <models.Officer>
+      <name>Maciej</name>
+      <dateOfBirth>15th August 200000</dateOfBirth>
+      <officerType>Veteran</officerType>
+      <crimesSolved>10</crimesSolved>
+      <unsolvedCrimes>5</unsolvedCrimes>
+      <salary>10.0</salary>
+      <peopleSaved>10</peopleSaved>
+    </models.Officer>
+  </list>
+</object-stream>
