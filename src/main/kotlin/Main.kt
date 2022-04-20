@@ -107,4 +107,18 @@ fun updateOfficer() {
     }
 }
 
+fun deleteOfficer() {
+    listOfficer()
+    if(officerAPI.numberOfficers() > 0) {
+        val indexToUpdate = readNextInt("Enter the index of the Officer to delete: ")
+
+        val officerToDelete = officerAPI.deleteOfficer(indexToUpdate)
+        if(officerToDelete != null) {
+            println("Delete Successful! Deleted Officer: ${officerToDelete.name}")
+        } else {
+            println("Delete NOT Successful")
+        }
+    }
+}
+
 
