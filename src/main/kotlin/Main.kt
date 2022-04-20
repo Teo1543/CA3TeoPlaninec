@@ -1,5 +1,6 @@
 import controllers.OfficerAPI
 import models.Officer
+import persistence.JSONSerializer
 import persistence.XMLSerializer
 import utils.ScannerInput
 import utils.ScannerInput.readNextDouble
@@ -9,7 +10,7 @@ import java.io.File
 import java.lang.System.exit
 
 
-private val officerAPI = OfficerAPI(XMLSerializer(File("officers.xml")))
+private val officerAPI = OfficerAPI(JSONSerializer(File("officers.json")))
 
 fun main(args: Array<String>) {
     runMenu()
