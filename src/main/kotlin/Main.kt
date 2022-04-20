@@ -22,7 +22,7 @@ fun mainMenu(): Int {
          > | NOTE MENU                          |
          > |   1) Add a Police Officers                    |
          > |   2) List Police Officers                    |
-         > |   3) (custom method)|
+         > |   3) Officer Type
          > |   4) Update a Police Officers                 |
          > |   5) Delete a Police Officers                 |
          > |   6) (custom method)               |
@@ -42,7 +42,7 @@ fun runMenu() {
         when(option) {
             1 -> addOfficer()
             2 -> listOfficer()
-            3 -> println("custom method")
+            3 -> officerType()
             4 -> updateOfficer()
             5 -> deleteOfficer()
             6 -> println("custom method")
@@ -74,6 +74,13 @@ fun addOfficer() {
 
 fun listOfficer() {
     var officers = officerAPI.listAllOfficers()
+
+    println(officers)
+}
+
+fun officerType() {
+    var type = readNextLine("Enter officer type: ")
+    var officers = officerAPI.officerTypeFinder(type)
 
     println(officers)
 }
