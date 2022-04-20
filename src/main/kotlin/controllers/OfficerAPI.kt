@@ -35,7 +35,7 @@ class OfficerAPI(serializerType: Serializer) {
     }
 
     fun updateOfficer(indexToUpdate: Int, officer: Officer?): Boolean {
-        val foundOfficer = findNote(indexToUpdate)
+        val foundOfficer = findOfficer(indexToUpdate)
 
         if((foundOfficer != null) && (officer != null)) {
             foundOfficer.name = officer.name
@@ -50,7 +50,11 @@ class OfficerAPI(serializerType: Serializer) {
         return false
     }
 
-    fun findNote(index: Int): Officer? {
+    fun clear() {
+        officers.clear()
+    }
+
+    fun findOfficer(index: Int): Officer? {
         return if(isValidListIndex(index, officers)) {
             officers[index]
         } else null
