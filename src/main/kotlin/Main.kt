@@ -122,3 +122,12 @@ fun deleteOfficer() {
 }
 
 
+fun searchOfficer() {
+    var type = readNextLine("Enter officer type: ")
+
+   var officers = officerAPI.officerTypeFinder(type)
+
+    println(officers)
+}
+
+
