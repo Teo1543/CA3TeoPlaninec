@@ -24,7 +24,7 @@ fun mainMenu(): Int {
          > -------------------------------------------------
          > |       Police Officers APP                     |
          > -------------------------------------------------
-         > | NOTE MENU                                     |
+         > | Officer MENU                                  |
          > |   1) Add a Police Officers                    |
          > |   2) List Police Officers                     |
          > |   3) Officer Type                             |
