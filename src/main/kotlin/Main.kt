@@ -1,13 +1,15 @@
 import controllers.OfficerAPI
 import models.Officer
+import persistence.XMLSerializer
 import utils.ScannerInput
 import utils.ScannerInput.readNextDouble
 import utils.ScannerInput.readNextInt
 import utils.ScannerInput.readNextLine
+import java.io.File
 import java.lang.System.exit
 
 
-private val officerAPI = OfficerAPI()
+private val officerAPI = OfficerAPI(XMLSerializer(File("officers.xml")))
 
 fun main(args: Array<String>) {
     runMenu()
@@ -31,8 +33,8 @@ fun mainMenu(): Int {
          >     8) List solved crime        
          >     9) Officers With Higher solved crimes     |
          > --------------------------------------
-         > |   9) Save Police Officers                   |
-         > |   10) Load Police Officers                   |
+         > |   10) Save Police Officers                   |
+         > |   11) Load Police Officers                   |
          > |   0) Exit                          |
          > --------------------------------------
          > ==>> """.trimMargin(">")
@@ -52,8 +54,8 @@ fun runMenu() {
             7 -> searchOfficer()
             8 -> unsolvedCrimes()
             9 -> officersWithHigherSolvedCrimes()
-            10 ->  println()
-            11 -> println()
+            10 ->  save()
+            11 -> load()
             0 -> exitApp()
             else -> println("Invalid option entered $option")
         }
@@ -153,6 +155,22 @@ fun officersWithHigherSolvedCrimes() {
 fun exitApp() {
     println("Exiting...bye")
     exit(0)
+}
+
+fun save() {
+    try {
+        officerAPI.store()
+    } catch (e: Exception) {
+        System.err.println("Error writing to file: $e")
+    }
+}
+
+fun load() {
+    try {
+        officerAPI.load()
+    } catch (e: Exception) {
+        System.err.println("Error reading from file: $e")
+    }
 }
 
 

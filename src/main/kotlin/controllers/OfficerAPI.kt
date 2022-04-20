@@ -1,10 +1,12 @@
 package controllers
 
 import models.Officer
+import persistence.Serializer
 
-class OfficerAPI {
+class OfficerAPI(serializerType: Serializer) {
 
     private var officers = ArrayList<Officer>();
+    private var serializer: Serializer = serializerType
 
     fun add(officer: Officer): Boolean {
         return officers.add(officer);
@@ -105,6 +107,16 @@ class OfficerAPI {
         }
     }
 
+
+    @Throws(Exception::class)
+    fun load() {
+        officers = serializer.read() as ArrayList<Officer>
+    }
+
+    @Throws(Exception::class)
+    fun store() {
+        serializer.write(officers)
+    }
 
 
 
